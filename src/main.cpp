@@ -1,10 +1,5 @@
 #include "robot-config.h"
 
-/*
-        
-
-*/
-
 //Creates a competition object that allows access to Competition methods.
 vex::competition Competition;
 
@@ -17,16 +12,15 @@ double adjSpeed = 0.5;   //adjust drive sensitivity
 double adjLift = 1.0;    //adjust arm's sensitivity
 int deadBand = 10;      //range below which joystick is ignored
 double adjField = 1.0;  //adjust automouse drive() degrees match conditions
-bool clawClosed = 0;
+bool clawClosed = 0;    //MAY DELETE
 
-int fwdDir = 1;
 
 //MOVEMENT / CONTROL
 int tLift();                                  //arm-relatecd tasks / buttons
 void rDrive(double, double, int, int, bool);  //DRIVE BY RELATIVE DISTANCE
 void rLift(double, int, bool);                //ARM BY RELATIVE DISTANCE 
 void aLift(double, int, bool);                //ARM BY ABSOLUTE DISTANCE
-void toggleClaw(void);
+void toggleClaw(void);                        //MAY DELETE
 
 void autonomous( void ) {
     /*
